@@ -7,6 +7,7 @@ import com.example.teachingaffairs.ui.activity.BaseActivity;
 
 /**
  * Created by 闫星位 on 2018/2/6.
+ * 成绩录入页面
  */
 
 public class ScoreRegistration extends BaseActivity{
