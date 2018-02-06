@@ -11,7 +11,7 @@ import com.example.teachingaffairs.R;
 import com.example.teachingaffairs.ui.activity.BaseActivity;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.presenter.ApplicationStudentPresenter;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.view.IApplicationView;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.view.IApplicationStudentView;
 import com.example.teachingaffairs.ui.adapter.EvaluationTeachingAdapter;
 
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.List;
  * 网上评教
  */
 
-public class EvaluationTeaching extends BaseActivity implements IApplicationView{
+public class EvaluationTeaching extends BaseActivity implements IApplicationStudentView {
     private TextView panel_title;
     private ListView listview;
     private ApplicationStudentPresenter mApplicationPresenter;

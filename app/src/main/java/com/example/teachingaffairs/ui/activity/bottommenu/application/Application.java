@@ -25,7 +25,7 @@ import com.example.teachingaffairs.ui.activity.bottommenu.application.teacher.In
 import com.example.teachingaffairs.ui.activity.bottommenu.application.teacher.MineScheduleTeacher;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.teacher.ScoreRegistration;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.teacher.TeachingTask;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.view.IApplicationView;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.view.IApplicationStudentView;
 import com.example.teachingaffairs.ui.adapter.ApplicationAdapter;
 
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ import java.util.List;
  * 应用页
  */
 
-public class Application extends BaseActivity implements IApplicationView{
+public class Application extends BaseActivity implements IApplicationStudentView {
     private GridView gridView;
     private ArrayList<HashMap<String,Object>> datalist;
     private Intent intent;

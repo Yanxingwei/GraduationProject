@@ -9,7 +9,7 @@ import com.example.teachingaffairs.R;
 import com.example.teachingaffairs.ui.activity.BaseActivity;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.presenter.ApplicationStudentPresenter;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.view.IApplicationView;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.view.IApplicationStudentView;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ import java.util.List;
  * 课程详情
  */
 
-public class CourseDetails extends BaseActivity implements IApplicationView{
+public class CourseDetails extends BaseActivity implements IApplicationStudentView {
     private TextView panel_title;
     private TextView textbook_name,teacher_name,time,address,Coursede_details;
     private String textbook_name_text,teacher_name_text,time_text,address_text,Coursede_details_text;

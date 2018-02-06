@@ -10,7 +10,7 @@ import com.example.teachingaffairs.R;
 import com.example.teachingaffairs.ui.activity.BaseActivity;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.presenter.ApplicationStudentPresenter;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.view.IApplicationView;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.view.IApplicationStudentView;
 import com.example.teachingaffairs.ui.adapter.EvaluationTeachingStartAdapter;
 
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.List;
  * Created by 闫星位 on 2018/1/30.
  */
 
-public class EvaluationTeachingStart extends BaseActivity implements IApplicationView{
+public class EvaluationTeachingStart extends BaseActivity implements IApplicationStudentView {
     private TextView panel_title;
     private ExpandableListView elv_evaluation_teacher;
     private ApplicationStudentPresenter mApplicationPresenter;

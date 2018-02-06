@@ -8,7 +8,7 @@ import com.example.teachingaffairs.R;
 import com.example.teachingaffairs.ui.activity.BaseActivity;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.presenter.ApplicationStudentPresenter;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.view.IApplicationView;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.view.IApplicationStudentView;
 import com.example.teachingaffairs.ui.adapter.ExamArrangementAdapter;
 
 import java.util.List;
@@ -21,7 +21,7 @@ import butterknife.ButterKnife;
  * 考试安排
  */
 
-public class ExamArrangement extends BaseActivity implements IApplicationView{
+public class ExamArrangement extends BaseActivity implements IApplicationStudentView {
     @Bind(R.id.common_panel_title)
     TextView commonPanelTitle;
     @Bind(R.id.listview)

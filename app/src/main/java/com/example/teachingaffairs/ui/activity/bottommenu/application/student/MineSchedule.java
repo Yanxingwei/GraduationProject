@@ -8,7 +8,7 @@ import com.example.teachingaffairs.R;
 import com.example.teachingaffairs.ui.activity.BaseActivity;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.presenter.ApplicationStudentPresenter;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.view.IApplicationView;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.view.IApplicationStudentView;
 import com.example.teachingaffairs.ui.adapter.MineScheduleAdapter;
 
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.List;
  * 我的课表
  */
 
-public class MineSchedule extends BaseActivity implements IApplicationView{
+public class MineSchedule extends BaseActivity implements IApplicationStudentView {
     private TextView panel_title;
     private ApplicationStudentPresenter mApplicationPresenter;
     private GridView gridView;

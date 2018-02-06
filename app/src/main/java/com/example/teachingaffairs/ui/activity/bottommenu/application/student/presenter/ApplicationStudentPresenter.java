@@ -3,7 +3,7 @@ package com.example.teachingaffairs.ui.activity.bottommenu.application.student.p
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.model.ApplicationStudentModel;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.model.IApplicationStudentModel;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.view.IApplicationView;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.view.IApplicationStudentView;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import java.util.List;
 
 public class ApplicationStudentPresenter {
     private IApplicationStudentModel mApplicationModel;
-    private IApplicationView mApplicationView;
-    public ApplicationStudentPresenter(IApplicationView mApplicationView){
+    private IApplicationStudentView mApplicationView;
+    public ApplicationStudentPresenter(IApplicationStudentView mApplicationView){
         this.mApplicationView = mApplicationView;
         this.mApplicationModel = new ApplicationStudentModel();
     }

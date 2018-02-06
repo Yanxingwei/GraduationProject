@@ -17,7 +17,7 @@ import com.example.teachingaffairs.R;
 import com.example.teachingaffairs.ui.activity.BaseActivity;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.presenter.ApplicationStudentPresenter;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.view.IApplicationView;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.view.IApplicationStudentView;
 import com.example.teachingaffairs.ui.adapter.FreeClassroomAdapter;
 import com.example.teachingaffairs.ui.adapter.FreeClassroomPopuAdapter;
 
@@ -32,7 +32,7 @@ import java.util.TimeZone;
  * 空闲教室
  */
 
-public class FreeClassroom extends BaseActivity implements View.OnClickListener,IApplicationView{
+public class FreeClassroom extends BaseActivity implements View.OnClickListener,IApplicationStudentView {
     //整个布局（除了顶部标题），用于popupwindow外部点击可关闭功能的实现
     private LinearLayout linearLayout_bg;
     //顶部标题栏

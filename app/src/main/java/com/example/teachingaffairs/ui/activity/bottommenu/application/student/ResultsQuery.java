@@ -14,7 +14,7 @@ import com.example.teachingaffairs.R;
 import com.example.teachingaffairs.ui.activity.BaseActivity;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.presenter.ApplicationStudentPresenter;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.view.IApplicationView;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.view.IApplicationStudentView;
 import com.example.teachingaffairs.ui.adapter.ResultsQueryAdapter;
 import com.example.teachingaffairs.ui.adapter.ResultsQueryPopupAdapter;
 
@@ -31,7 +31,7 @@ import butterknife.OnClick;
  * 成绩查询
  */
 
-public class ResultsQuery extends BaseActivity implements View.OnClickListener,IApplicationView {
+public class ResultsQuery extends BaseActivity implements View.OnClickListener,IApplicationStudentView {
 
     @Bind(R.id.common_panel_title)
     TextView commonPanelTitle;
