@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.teachingaffairs.R;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.bean.ApplicationBean;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
 
 import java.util.List;
 
@@ -19,8 +19,8 @@ import java.util.List;
 
 public class ExamArrangementAdapter extends BaseAdapter {
     private LayoutInflater inflater;
-    private List<ApplicationBean> data;
-    public ExamArrangementAdapter(Context mContext, List<ApplicationBean> data){
+    private List<ApplicationStudentBean> data;
+    public ExamArrangementAdapter(Context mContext, List<ApplicationStudentBean> data){
         this.data = data;
         this.inflater = LayoutInflater.from(mContext);
     }

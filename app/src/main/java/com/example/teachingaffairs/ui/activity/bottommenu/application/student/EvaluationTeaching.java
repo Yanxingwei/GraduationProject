@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 import com.example.teachingaffairs.R;
 import com.example.teachingaffairs.ui.activity.BaseActivity;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.bean.ApplicationBean;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.presenter.ApplicationPresenter;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.presenter.ApplicationStudentPresenter;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.view.IApplicationView;
 import com.example.teachingaffairs.ui.adapter.EvaluationTeachingAdapter;
 
@@ -24,7 +24,7 @@ import java.util.List;
 public class EvaluationTeaching extends BaseActivity implements IApplicationView{
     private TextView panel_title;
     private ListView listview;
-    private ApplicationPresenter mApplicationPresenter;
+    private ApplicationStudentPresenter mApplicationPresenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,19 +36,19 @@ public class EvaluationTeaching extends BaseActivity implements IApplicationView
         panel_title = (TextView) findViewById(R.id.common_panel_title);
         panel_title.setText("本学期课程");
         listview = (ListView) findViewById(R.id.listview);
-        mApplicationPresenter = new ApplicationPresenter(this);
+        mApplicationPresenter = new ApplicationStudentPresenter(this);
         mApplicationPresenter.getType("本学期课程");
         mApplicationPresenter.bindmv();
     }
 
     @Override
-    public void showdata(List<ApplicationBean> data) {
+    public void showdata(List<ApplicationStudentBean> data) {
         listview.setAdapter(new EvaluationTeachingAdapter(this,data));
         Listener();
     }
 
     @Override
-    public void showELVdata(List<ApplicationBean> datagroup, List<List<ApplicationBean>> datachild) {
+    public void showELVdata(List<ApplicationStudentBean> datagroup, List<List<ApplicationStudentBean>> datachild) {
 
     }
     private void Listener(){

@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.teachingaffairs.R;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.bean.ApplicationBean;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
 import com.example.teachingaffairs.ui.utils.StringHelper;
 
 import java.util.List;
@@ -18,9 +18,9 @@ import java.util.List;
  */
 
 public class MineScheduleAdapter extends BaseAdapter {
-    private List<ApplicationBean> data;
+    private List<ApplicationStudentBean> data;
     private LayoutInflater inflater;
-    public MineScheduleAdapter(Context mContext,List<ApplicationBean> data){
+    public MineScheduleAdapter(Context mContext,List<ApplicationStudentBean> data){
         this.data = data;
         this.inflater = LayoutInflater.from(mContext);
     }

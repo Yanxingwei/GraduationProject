@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.teachingaffairs.R;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.bean.ApplicationBean;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
 
 import java.util.List;
 
@@ -20,9 +20,9 @@ import butterknife.Bind;
 
 public class ResultsQueryAdapter extends BaseAdapter {
     private LayoutInflater inflater;
-    private List<ApplicationBean> datalist;
+    private List<ApplicationStudentBean> datalist;
 
-    public ResultsQueryAdapter(Context mContext, List<ApplicationBean>  datalist) {
+    public ResultsQueryAdapter(Context mContext, List<ApplicationStudentBean>  datalist) {
         this.datalist = datalist;
         this.inflater = LayoutInflater.from(mContext);
     }

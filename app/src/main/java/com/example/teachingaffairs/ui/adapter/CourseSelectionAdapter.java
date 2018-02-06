@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.teachingaffairs.R;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.bean.ApplicationBean;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +19,9 @@ import java.util.List;
  */
 
 public class CourseSelectionAdapter extends BaseAdapter {
-    private List<ApplicationBean> data = new ArrayList<>();
+    private List<ApplicationStudentBean> data = new ArrayList<>();
     private LayoutInflater inflater;
-    public CourseSelectionAdapter(Context mContext, List<ApplicationBean> data){
+    public CourseSelectionAdapter(Context mContext, List<ApplicationStudentBean> data){
         this.data = data;
         this.inflater = LayoutInflater.from(mContext);
     }

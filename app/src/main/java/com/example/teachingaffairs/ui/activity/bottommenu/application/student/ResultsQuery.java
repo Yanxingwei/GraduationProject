@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 import com.example.teachingaffairs.R;
 import com.example.teachingaffairs.ui.activity.BaseActivity;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.bean.ApplicationBean;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.presenter.ApplicationPresenter;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.presenter.ApplicationStudentPresenter;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.view.IApplicationView;
 import com.example.teachingaffairs.ui.adapter.ResultsQueryAdapter;
 import com.example.teachingaffairs.ui.adapter.ResultsQueryPopupAdapter;
@@ -56,9 +56,9 @@ public class ResultsQuery extends BaseActivity implements View.OnClickListener,I
     private LayoutInflater inflater;
     private View view;
     private ListView popuplistview;
-    private ApplicationPresenter mApplicationPresenter;
+    private ApplicationStudentPresenter mApplicationPresenter;
     //获取的成绩信息
-    private List<ApplicationBean> data;
+    private List<ApplicationStudentBean> data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +75,7 @@ public class ResultsQuery extends BaseActivity implements View.OnClickListener,I
         inflater = getLayoutInflater();
         view = inflater.inflate(R.layout.app_app_results_query_popup,null);
         popuplistview = (ListView) view.findViewById(R.id.listview);
-        mApplicationPresenter = new ApplicationPresenter(this);
+        mApplicationPresenter = new ApplicationStudentPresenter(this);
     }
 
     @Override
@@ -271,12 +271,12 @@ public class ResultsQuery extends BaseActivity implements View.OnClickListener,I
     }
 
     @Override
-    public void showdata(List<ApplicationBean> data) {
+    public void showdata(List<ApplicationStudentBean> data) {
         this.data = data;
     }
 
     @Override
-    public void showELVdata(List<ApplicationBean> datagroup, List<List<ApplicationBean>> datachild) {}
+    public void showELVdata(List<ApplicationStudentBean> datagroup, List<List<ApplicationStudentBean>> datachild) {}
 
     //成绩无数据时显示的页面
     private void No_data(){

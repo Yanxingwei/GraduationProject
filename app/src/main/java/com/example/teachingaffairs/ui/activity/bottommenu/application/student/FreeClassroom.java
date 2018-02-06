@@ -15,8 +15,8 @@ import android.widget.TextView;
 
 import com.example.teachingaffairs.R;
 import com.example.teachingaffairs.ui.activity.BaseActivity;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.bean.ApplicationBean;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.presenter.ApplicationPresenter;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.presenter.ApplicationStudentPresenter;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.view.IApplicationView;
 import com.example.teachingaffairs.ui.adapter.FreeClassroomAdapter;
 import com.example.teachingaffairs.ui.adapter.FreeClassroomPopuAdapter;
@@ -65,8 +65,8 @@ public class FreeClassroom extends BaseActivity implements View.OnClickListener,
     private View view;
     private Window window;
 
-    private ApplicationPresenter mApplicationPresenter;
-    private List<ApplicationBean> data;
+    private ApplicationStudentPresenter mApplicationPresenter;
+    private List<ApplicationStudentBean> data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +96,7 @@ public class FreeClassroom extends BaseActivity implements View.OnClickListener,
         select_what.setOnClickListener(this);
         select_btn.setOnClickListener(this);
 
-        mApplicationPresenter = new ApplicationPresenter(this);
+        mApplicationPresenter = new ApplicationStudentPresenter(this);
     }
 
 
@@ -130,7 +130,7 @@ public class FreeClassroom extends BaseActivity implements View.OnClickListener,
         }
     }
     @Override
-    public void showdata(List<ApplicationBean> data) {
+    public void showdata(List<ApplicationStudentBean> data) {
         this.data = data;
     }
     /**
@@ -287,5 +287,5 @@ public class FreeClassroom extends BaseActivity implements View.OnClickListener,
     }
 
     @Override
-    public void showELVdata(List<ApplicationBean> datagroup, List<List<ApplicationBean>> datachild) {}
+    public void showELVdata(List<ApplicationStudentBean> datagroup, List<List<ApplicationStudentBean>> datachild) {}
 }

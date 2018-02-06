@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.teachingaffairs.R;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.bean.ApplicationBean;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
 
 import java.util.List;
 
@@ -18,9 +18,9 @@ import java.util.List;
 
 public class FreeClassroomAdapter extends BaseAdapter{
 
-    private List<ApplicationBean> datalist;
+    private List<ApplicationStudentBean> datalist;
     private LayoutInflater inflater;
-    public FreeClassroomAdapter(Context mContext, List<ApplicationBean> datalist){
+    public FreeClassroomAdapter(Context mContext, List<ApplicationStudentBean> datalist){
         this.datalist = datalist;
         this.inflater = LayoutInflater.from(mContext);
     }

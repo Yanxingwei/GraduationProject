@@ -7,8 +7,8 @@ import android.widget.TextView;
 
 import com.example.teachingaffairs.R;
 import com.example.teachingaffairs.ui.activity.BaseActivity;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.bean.ApplicationBean;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.presenter.ApplicationPresenter;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.presenter.ApplicationStudentPresenter;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.view.IApplicationView;
 
 import java.util.List;
@@ -23,7 +23,7 @@ public class CourseDetails extends BaseActivity implements IApplicationView{
     private TextView textbook_name,teacher_name,time,address,Coursede_details;
     private String textbook_name_text,teacher_name_text,time_text,address_text,Coursede_details_text;
     private TextView btn_Select;
-    private ApplicationPresenter mApplicationPresenter;
+    private ApplicationStudentPresenter mApplicationPresenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +49,7 @@ public class CourseDetails extends BaseActivity implements IApplicationView{
         time.setText(time_text);
         address.setText(address_text);
 
-        mApplicationPresenter = new ApplicationPresenter(this);
+        mApplicationPresenter = new ApplicationStudentPresenter(this);
         mApplicationPresenter.getType(textbook_name_text);
         mApplicationPresenter.bindmv();
         Select();
@@ -77,12 +77,12 @@ public class CourseDetails extends BaseActivity implements IApplicationView{
     }
 
     @Override
-    public void showdata(List<ApplicationBean> data) {
+    public void showdata(List<ApplicationStudentBean> data) {
         Coursede_details.setText(data.get(0).getMineSchedule());
     }
 
     @Override
-    public void showELVdata(List<ApplicationBean> datagroup, List<List<ApplicationBean>> datachild) {
+    public void showELVdata(List<ApplicationStudentBean> datagroup, List<List<ApplicationStudentBean>> datachild) {
 
     }
 }

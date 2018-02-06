@@ -10,8 +10,8 @@ import android.widget.LinearLayout;
 
 import com.example.teachingaffairs.R;
 import com.example.teachingaffairs.ui.activity.BaseActivity;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.bean.ApplicationBean;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.presenter.ApplicationPresenter;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.presenter.ApplicationStudentPresenter;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.CourseSelection;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.EvaluationTeaching;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.student.ExamArrangement;
@@ -42,8 +42,8 @@ public class Application extends BaseActivity implements IApplicationView{
     private ArrayList<HashMap<String,Object>> datalist;
     private Intent intent;
     private LinearLayout exam_arrangement,results_query;
-    private ApplicationPresenter mApplicationPresenter;
-    private List<ApplicationBean> data;
+    private ApplicationStudentPresenter mApplicationPresenter;
+    private List<ApplicationStudentBean> data;
     private AlertDialog alertDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +78,7 @@ public class Application extends BaseActivity implements IApplicationView{
      * 学生应用界面
      */
     private void initstudent(){
-        mApplicationPresenter = new ApplicationPresenter(this);
+        mApplicationPresenter = new ApplicationStudentPresenter(this);
         exam_arrangement = (LinearLayout) findViewById(R.id.exam_arrangement);
         results_query = (LinearLayout) findViewById(R.id.results_query);
         gridView = (GridView) findViewById(R.id.gridview);
@@ -104,7 +104,7 @@ public class Application extends BaseActivity implements IApplicationView{
     }
 
     @Override
-    public void showdata(List<ApplicationBean> data) {
+    public void showdata(List<ApplicationStudentBean> data) {
         this.data = data;
     }
 
@@ -189,7 +189,7 @@ public class Application extends BaseActivity implements IApplicationView{
     };
 
     @Override
-    public void showELVdata(List<ApplicationBean> datagroup, List<List<ApplicationBean>> datachild) {
+    public void showELVdata(List<ApplicationStudentBean> datagroup, List<List<ApplicationStudentBean>> datachild) {
 
     }
 

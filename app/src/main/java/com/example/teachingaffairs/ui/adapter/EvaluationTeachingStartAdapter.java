@@ -10,7 +10,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.example.teachingaffairs.R;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.bean.ApplicationBean;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
 
 import java.util.List;
 
@@ -22,10 +22,10 @@ import java.util.List;
 public class EvaluationTeachingStartAdapter extends BaseExpandableListAdapter {
 
     private LayoutInflater inflater;
-    private List<ApplicationBean> itemGroup;
-    private List<List<ApplicationBean>> itemChild;
+    private List<ApplicationStudentBean> itemGroup;
+    private List<List<ApplicationStudentBean>> itemChild;
 
-    public EvaluationTeachingStartAdapter(Context mContext, List<ApplicationBean> itemGroup, List<List<ApplicationBean>> itemChild){
+    public EvaluationTeachingStartAdapter(Context mContext, List<ApplicationStudentBean> itemGroup, List<List<ApplicationStudentBean>> itemChild){
         this.inflater = LayoutInflater.from(mContext);
         this.itemGroup = itemGroup;
         this.itemChild = itemChild;
@@ -105,7 +105,7 @@ public class EvaluationTeachingStartAdapter extends BaseExpandableListAdapter {
             holder = (ChildHolder) convertView.getTag();
         }
 
-        ApplicationBean module = itemChild.get(groupPosition).get(childPosition);
+        ApplicationStudentBean module = itemChild.get(groupPosition).get(childPosition);
 
         holder.elv_child_problem.setText(itemChild.get(groupPosition).get(childPosition).getItemChild());
         holder.rb_Verygood.setText(itemChild.get(groupPosition).get(childPosition).getRb_verygood());
@@ -124,7 +124,7 @@ public class EvaluationTeachingStartAdapter extends BaseExpandableListAdapter {
         }
         return convertView;
     }
-    private void initListener(final ChildHolder holder, final ApplicationBean module){
+    private void initListener(final ChildHolder holder, final ApplicationStudentBean module){
         holder.rb_Verygood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

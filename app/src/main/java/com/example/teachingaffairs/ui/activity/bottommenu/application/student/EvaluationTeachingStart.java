@@ -8,8 +8,8 @@ import android.widget.TextView;
 
 import com.example.teachingaffairs.R;
 import com.example.teachingaffairs.ui.activity.BaseActivity;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.bean.ApplicationBean;
-import com.example.teachingaffairs.ui.activity.bottommenu.application.presenter.ApplicationPresenter;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.presenter.ApplicationStudentPresenter;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.view.IApplicationView;
 import com.example.teachingaffairs.ui.adapter.EvaluationTeachingStartAdapter;
 
@@ -22,7 +22,7 @@ import java.util.List;
 public class EvaluationTeachingStart extends BaseActivity implements IApplicationView{
     private TextView panel_title;
     private ExpandableListView elv_evaluation_teacher;
-    private ApplicationPresenter mApplicationPresenter;
+    private ApplicationStudentPresenter mApplicationPresenter;
     private EvaluationTeachingStartAdapter adapter;
     private TextView name;
     private TextView btn_submit;
@@ -41,7 +41,7 @@ public class EvaluationTeachingStart extends BaseActivity implements IApplicatio
         btn_submit = (TextView) findViewById(R.id.btn_submit);
         name.setText("请对"+name()+"老师进行评教：");
         elv_evaluation_teacher = (ExpandableListView) findViewById(R.id.elv_evaluation_teacher);
-        mApplicationPresenter = new ApplicationPresenter(this);
+        mApplicationPresenter = new ApplicationStudentPresenter(this);
         mApplicationPresenter.getType("网上评教");
         mApplicationPresenter.bindmv();
 //        submitListener();
@@ -54,10 +54,10 @@ public class EvaluationTeachingStart extends BaseActivity implements IApplicatio
         return name;
     }
     @Override
-    public void showdata(List<ApplicationBean> data) {}
+    public void showdata(List<ApplicationStudentBean> data) {}
 
     @Override
-    public void showELVdata(List<ApplicationBean> datagroup, List<List<ApplicationBean>> datachild) {
+    public void showELVdata(List<ApplicationStudentBean> datagroup, List<List<ApplicationStudentBean>> datachild) {
         adapter = new EvaluationTeachingStartAdapter(this,datagroup,datachild);
         elv_evaluation_teacher.setAdapter(adapter);
         int groupcount = elv_evaluation_teacher.getCount();

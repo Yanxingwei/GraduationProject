@@ -1,6 +1,6 @@
 package com.example.teachingaffairs.ui.activity.bottommenu.application.view;
 
-import com.example.teachingaffairs.ui.activity.bottommenu.application.bean.ApplicationBean;
+import com.example.teachingaffairs.ui.activity.bottommenu.application.student.bean.ApplicationStudentBean;
 
 import java.util.List;
 
@@ -9,6 +9,6 @@ import java.util.List;
  */
 
 public interface IApplicationView {
-    void showdata(List<ApplicationBean> data);
-    void showELVdata(List<ApplicationBean> datagroup,List<List<ApplicationBean>> datachild);
+    void showdata(List<ApplicationStudentBean> data);
+    void showELVdata(List<ApplicationStudentBean> datagroup, List<List<ApplicationStudentBean>> datachild);
 }
