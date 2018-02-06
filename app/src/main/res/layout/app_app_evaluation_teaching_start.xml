@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_panel_layout"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_30"
+        android:text="请对某某某老师进行评教："
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimens_10"
+        android:background="@color/white"/>
+
+    <ExpandableListView
+        android:id="@+id/elv_evaluation_teacher"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:dividerHeight="@dimen/dimens_0"
+        android:divider="#00000000"
+        android:groupIndicator="@null"
+        android:background="@color/white"
+        android:layout_weight="1.0"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_0.5"
+        android:background="@color/view_bg"/>
+
+    <TextView
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_40"
+        android:text="提    交"
+        android:background="@color/white"
+        android:textSize="@dimen/textsize_16"
+        android:gravity="center"
+        android:textColor="@color/common_tip_text"/>
+
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/dimens_15"
+    android:layout_marginRight="@dimen/dimens_15">
+
+    <com.example.teachingaffairs.ui.components.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="时光荏苒，我的大学之旅即将结束，回想昂首阔步、斗志昂扬走过的大学求学之路，有辛酸、有快乐，感触颇多。"/>
+
+
+</LinearLayout>

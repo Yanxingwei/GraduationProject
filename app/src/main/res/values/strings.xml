@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">"藏大教务"</string>
+    <string name="go_back">"返回"</string>
+    <string name="index_panel_titla">"移动教务平台"</string>
+    <string name="rb_notice">"教务"</string>
+    <string name="rb_application">"应用"</string>
+    <string name="rb_release">"发布"</string>
+    <string name="rb_forum">"论坛"</string>
+    <string name="rb_Professional">"专业"</string>
+    <string name="rb_address_books">"通讯录"</string>
+
+    <string name="login_title">"西藏大学移动教务平台"</string>
+    <string name="login_power_title">"我是"</string>
+    <string name="username_title">"学号"</string>
+    <string name="user_name">"请输入学号"</string>
+    <string name="upassword_title">"密码"</string>
+    <string name="password_rem">"记住密码"</string>
+    <string name="login_btn">"登  录"</string>
+    <string name="login_power_name">"教师"</string>
+
+    <string name="version">"当前版本号：1.1.0"</string>
+    <string name="about_us">"关于藏大教务"</string>
+    <string name="about_us_content">"藏大教务是由西藏大学工学院电子与信息工程系2014级信息工程班学生闫星位，在李勇峰副教授的指导下，开发的一款android手机APP。该项目是我的本科毕业设计，旨在解决目前藏大校园内无移动教务平台,给老师、同学们带来的各种不方便。"</string>
+    <string name="about_us_phone">"开发人员及其联系方式"</string>
+    <string name="about_us_mail">"我的邮箱："</string>
+    <string name="about_us_mobile_phone">"手机号码："</string>
+    <string name="about_us_person">"开发人员："</string>
+    <string name="about_us_name">"闫星位"</string>
+    <string name="about_us_mine_phone">"15393527030"</string>
+    <string name="about_us_mine_email">"784489407@qq.com"</string>
+
+    <string name="change_pasw_old">"原密码"</string>
+    <string name="change_pasw_new">"新密码"</string>
+    <string name="change_pasw_new_ok">"确认密码"</string>
+    <string name="change_pasw_old_put">"请输入原密码"</string>
+    <string name="change_pasw_new_put">"请输入新密码"</string>
+    <string name="change_pasw_new_ok_put">"请输入确认密码"</string>
+    <string name="change_pasw_btn">"完成修改"</string>
+
+    <string name="signature">"个人签名"</string>
+    <string name="personal_information">"个人简历"</string>
+    <string name="change_password">"修改密码"</string>
+    <string name="online_service">"在线服务"</string>
+    <string name="message_feed_back">"信息反馈"</string>
+    <string name="aboutus">"关于我们"</string>
+    <string name="sign_out">"退出登录"</string>
+
+    <string name="suggest">意见反馈</string>
+    <string name="suggest_title">请输入意见标题</string>
+    <string name="suggest_content">意见内容</string>
+    <string name="suggest_content_put">请输入反馈信息（不超过200字）</string>
+    <string name="suggest_submit">提交信息</string>
+
+
+
+</resources>

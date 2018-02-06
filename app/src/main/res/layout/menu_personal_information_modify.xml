@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_panel_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/dimens_15"
+                    android:layout_weight="1.0"
+                    android:gravity="center|left">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1.0">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="姓名"/>
+
+                        <EditText
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="闫星位"
+                            android:layout_marginLeft="@dimen/dimens_5"
+                            android:background="@drawable/common_no_shape"
+                            android:textSize="@dimen/textsize_14"/>
+
+                        <View
+                            android:layout_width="@dimen/dimens_1"
+                            android:layout_height="@dimen/dimens_10"
+                            android:background="@color/view_bg"
+                            android:layout_marginLeft="@dimen/dimens_5" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="性别"
+                            android:layout_marginLeft="@dimen/dimens_5"/>
+
+                        <EditText
+                            android:id="@+id/sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="男"
+                            android:layout_marginLeft="@dimen/dimens_5"
+                            android:background="@drawable/common_no_shape"
+                            android:textSize="@dimen/textsize_14"/>
+
+                        <View
+                            android:layout_width="@dimen/dimens_1"
+                            android:layout_height="@dimen/dimens_10"
+                            android:background="@color/view_bg"
+                            android:layout_marginLeft="@dimen/dimens_5" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="民族"
+                            android:layout_marginLeft="@dimen/dimens_5"/>
+
+                        <EditText
+                            android:id="@+id/nation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="汉"
+                            android:layout_marginLeft="@dimen/dimens_5"
+                            android:background="@drawable/common_no_shape"
+                            android:textSize="@dimen/textsize_14"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1.0">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="政治面貌"/>
+
+                        <EditText
+                            android:id="@+id/politics_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="中共党员"
+                            android:layout_marginLeft="@dimen/dimens_5"
+                            android:background="@drawable/common_no_shape"
+                            android:textSize="@dimen/textsize_14"/>
+
+                        <View
+                            android:layout_width="@dimen/dimens_1"
+                            android:layout_height="@dimen/dimens_10"
+                            android:background="@color/view_bg"
+                            android:layout_marginLeft="@dimen/dimens_5" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="职位"
+                            android:layout_marginLeft="@dimen/dimens_5"/>
+
+                        <EditText
+                            android:id="@+id/position"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="学生"
+                            android:layout_marginLeft="@dimen/dimens_5"
+                            android:background="@drawable/common_no_shape"
+                            android:textSize="@dimen/textsize_14"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end">
+
+                    <ImageView
+                        android:id="@+id/add_picture"
+                        android:layout_width="@dimen/dimens_60"
+                        android:layout_height="@dimen/dimens_70"
+                        android:scaleType="fitXY"
+                        android:layout_marginRight="@dimen/dimens_15"
+                        android:layout_marginLeft="@dimen/dimens_15"
+                        android:layout_marginTop="@dimen/dimens_10"
+                        android:layout_marginBottom="@dimen/dimens_10"
+                        android:background="@mipmap/icon_addpic_unfocused"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/menu_personal_information_tv"
+                android:text="教育背景"
+                android:layout_marginBottom="@dimen/dimens_10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/menu_personal_information_education_item"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/menu_personal_information_tv"
+                android:text="自我评价"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_10"
+                android:orientation="vertical">
+
+                <include layout="@layout/menu_personal_information_evaluate"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/menu_personal_information_tv"
+                android:text="奖励情况"
+                android:layout_marginTop="@dimen/dimens_10"
+                android:layout_marginBottom="@dimen/dimens_10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/menu_personal_information_education_item"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/menu_personal_information_tv"
+                android:text="校内活动"
+                android:layout_marginBottom="@dimen/dimens_10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/menu_personal_information_education_item"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

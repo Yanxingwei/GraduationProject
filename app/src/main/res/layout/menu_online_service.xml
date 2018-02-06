@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_panel_layout"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_150"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dimens_10"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_100">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dimens_20"
+                android:layout_marginRight="@dimen/dimens_20">
+
+                <TextView
+                    android:layout_width="@dimen/dimens_40"
+                    android:layout_height="@dimen/dimens_40"
+                    android:background="@mipmap/aaa"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="移动教务平台支撑电话"
+                    android:textSize="@dimen/textsize_15"/>
+
+                <TextView
+                    android:id="@+id/phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="15393527030"
+                    android:layout_marginTop="@dimen/dimens_5"
+                    android:textSize="@dimen/textsize_15"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_marginRight="@dimen/dimens_20">
+
+                <TextView
+                    android:id="@+id/phone_icon"
+                    android:layout_width="@dimen/dimens_40"
+                    android:layout_height="@dimen/dimens_40"
+                    android:background="@mipmap/aaa"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_0.5"
+            android:background="@color/view_bg"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:layout_marginLeft="@dimen/dimens_20"
+            android:text="使用小提示：点击电话图标拨打支撑电话。"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dimens_10"
+        android:paddingLeft="@dimen/dimens_20"
+        android:paddingTop="@dimen/dimens_10"
+        android:paddingRight="@dimen/dimens_20"
+        android:paddingBottom="@dimen/dimens_10">
+
+        <com.example.teachingaffairs.ui.components.MyTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="如果您在使用过程中遇到什么问题，可以通过上面的方式联系我们，我们将竭诚为您服务！"
+            android:textColor="@color/common_tip_text"/>
+
+    </LinearLayout>
+
+</LinearLayout>

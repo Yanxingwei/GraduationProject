@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_panel_layout"/>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_40"
+            android:layout_margin="@dimen/dimens_10">
+
+            <TextView
+                android:id="@+id/time_year"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/dimens_10"
+                android:text="全部"
+                android:drawableRight="@mipmap/down"
+                android:paddingRight="@dimen/dimens_10"/>
+
+            <TextView
+                android:id="@+id/time_season"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/dimens_10"
+                android:text="春季"
+                android:drawableRight="@mipmap/down"
+                android:paddingRight="@dimen/dimens_10"
+                android:layout_marginLeft="@dimen/dimens_10"/>
+
+            <TextView
+                android:id="@+id/btn_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:background="@color/common_blue"
+                android:textColor="@color/white"
+                android:text="查询"
+                android:layout_marginLeft="@dimen/dimens_10"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_40"
+            android:text="全部课程成绩"
+            android:paddingLeft="@dimen/dimens_20"
+            android:background="#01958a"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="点击“查询”按钮以查询成绩"
+            android:textColor="@color/common_tip_text"
+            android:visibility="visible" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:visibility="gone"
+            android:dividerHeight="@dimen/dimens_0"
+            android:divider="#00000000"
+            android:listSelector="@android:color/transparent"/>
+
+    </LinearLayout>
+
+</LinearLayout>

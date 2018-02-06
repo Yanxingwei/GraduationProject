@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_80"
+        android:background="@color/white"
+        android:paddingTop="@dimen/dimens_10"
+        android:paddingBottom="@dimen/dimens_10"
+        android:paddingLeft="@dimen/dimens_10"
+        android:layout_marginTop="@dimen/dimens_5"
+        android:layout_marginBottom="@dimen/dimens_5">
+
+        <ImageView
+            android:id="@+id/course_picture"
+            android:layout_width="@dimen/dimens_40"
+            android:layout_height="@dimen/dimens_60"
+            android:background="@mipmap/textbook1"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dimens_10"
+            android:layout_marginRight="@dimen/dimens_10">
+
+            <TextView
+                android:id="@+id/course_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="大学语文"
+                android:layout_weight="1.0"
+                android:paddingTop="@dimen/dimens_2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:paddingBottom="@dimen/dimens_2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="日期:"
+                    android:gravity="bottom"
+                    android:textSize="@dimen/textsize_12"/>
+                <TextView
+                    android:id="@+id/exam_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2018-2-15"
+                    android:gravity="bottom|left"
+                    android:textSize="@dimen/textsize_12"
+                    android:layout_weight="1.0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="时间:"
+                    android:gravity="bottom"
+                    android:layout_marginLeft="@dimen/dimens_5"
+                    android:textSize="@dimen/textsize_12"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/exam_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="15:30-17:30"
+                    android:gravity="bottom|left"
+                    android:textSize="@dimen/textsize_12"
+                    android:layout_weight="1.0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="地点:"
+                    android:gravity="bottom|left"
+                    android:layout_marginLeft="@dimen/dimens_5"
+                    android:textSize="@dimen/textsize_12"/>
+                <TextView
+                    android:id="@+id/exam_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="4-106"
+                    android:gravity="bottom|center"
+                    android:textSize="@dimen/textsize_12"
+                    android:layout_weight="1.0"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

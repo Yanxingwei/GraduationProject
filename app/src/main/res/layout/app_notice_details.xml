@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_panel_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dimens_10"
+        android:layout_marginBottom="@dimen/dimens_10"
+        android:layout_marginRight="@dimen/dimens_10"
+        android:layout_marginTop="@dimen/dimens_10">
+
+        <TextView
+            android:id="@+id/notice_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hahaha"
+            android:gravity="center"/>
+
+        <com.example.teachingaffairs.ui.components.MyTextView
+            android:id="@+id/notice_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="aaaaa"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:lineSpacingExtra="@dimen/dimens_3"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_marginTop="@dimen/dimens_5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="来源："/>
+            <TextView
+                android:id="@+id/notice_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="教务处"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_marginTop="@dimen/dimens_5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间："/>
+            <TextView
+                android:id="@+id/notice_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018-1-23"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

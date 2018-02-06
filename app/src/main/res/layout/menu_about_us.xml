@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_panel_layout"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/dimens_60"
+            android:layout_height="@dimen/dimens_60"
+            android:src="@mipmap/logo"
+            android:layout_marginTop="@dimen/dimens_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_marginTop="@dimen/dimens_5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/version"
+            android:layout_marginTop="@dimen/dimens_5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/about_us"
+            style="@style/menu_personal_information_tv"
+            android:textStyle="normal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dimens_15"
+            android:paddingRight="@dimen/dimens_15"
+            android:layout_marginTop="@dimen/dimens_5">
+         <com.example.teachingaffairs.ui.components.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_us_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/about_us_phone"
+            style="@style/menu_personal_information_tv"
+            android:textStyle="normal"
+            android:layout_marginTop="@dimen/dimens_20"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dimens_15"
+                android:paddingRight="@dimen/dimens_15"
+                android:layout_marginTop="@dimen/dimens_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_us_person"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_us_name"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dimens_15"
+                android:paddingRight="@dimen/dimens_15"
+                android:layout_marginTop="@dimen/dimens_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_us_mobile_phone"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_us_mine_phone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dimens_15"
+                android:paddingRight="@dimen/dimens_15"
+                android:layout_marginTop="@dimen/dimens_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_us_mail"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_us_mine_email"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

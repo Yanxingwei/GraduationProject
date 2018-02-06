@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/elv_child_problem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimens_10"
+        android:lineSpacingExtra="@dimen/dimens_5"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimens_10"
+        android:layout_marginLeft="@dimen/dimens_20"
+        android:layout_marginRight="@dimen/dimens_20"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/rb_Verygood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.0"
+            android:paddingLeft="@dimen/dimens_20"/>
+
+        <RadioButton
+            android:id="@+id/rb_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.0"
+            android:paddingLeft="@dimen/dimens_20"/>
+
+        <RadioButton
+            android:id="@+id/rb_justsoso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.0"
+            android:paddingLeft="@dimen/dimens_20"/>
+
+        <RadioButton
+            android:id="@+id/rb_poor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.0"
+            android:paddingLeft="@dimen/dimens_20"/>
+
+    </RadioGroup>
+
+</LinearLayout>

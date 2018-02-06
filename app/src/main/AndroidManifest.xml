@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.teachingaffairs">
+
+    <!--  打电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.teachingaffairs.ui.activity.Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="首页">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.bottommenu.notice.Notice"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="通知">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.bottommenu.forumactivity.Forum"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="论坛">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.bottommenu.application.Application"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="应用" >
+        </activity>
+
+        <activity
+            android:name=".ui.activity.bottommenu.release.Release"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="发布" >
+        </activity>
+
+        <activity
+            android:name=".ui.activity.bottommenu.addressbooks.Address_Books"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="通讯录">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.leftmenu.Signature"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="个人签名">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.leftmenu.PersonalInformation"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="个人信息">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.leftmenu.ChangePassword"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="修改密码">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.leftmenu.OnlineService"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="在线服务">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.leftmenu.MessageFeedBack"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="信息反馈">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.leftmenu.AboutUs"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="关于我们" >
+        </activity>
+
+        <activity
+            android:name=".ui.activity.bottommenu.forumactivity.ForumDetails"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="帖子详细信息"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.bottommenu.forumactivity.ForumRelease"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="帖子详细信息"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.bottommenu.addressbooks.DepartmentPage"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="院系"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.bottommenu.addressbooks.Phones"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="电话号码"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.notice.NoticeDetails"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="教务公告详情"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.application.student.CourseSelection"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="网上选课"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.application.student.EvaluationTeaching"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="网上评教"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.application.student.ExamArrangement"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="考试安排"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.application.student.MineSchedule"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="我的课表"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.application.student.ResultsQuery"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="成绩查询"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.application.student.TrainingScheme"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="培养方案"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.application.student.TurnProfessional"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="转专业"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.application.student.FreeClassroom"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="空闲教室"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.application.student.CourseDetails"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="课程详情"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.application.student.EvaluationTeachingStart"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="开始线上评教"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.application.teacher.EvaluationResults"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="评教结果"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.application.teacher.InvigilationArrangement"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="监考安排"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.application.teacher.MineScheduleTeacher"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="我的课表"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.application.teacher.ScoreRegistration"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="成绩录入"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.bottommenu.application.teacher.TeachingTask"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="教学任务"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".ui.activity.leftmenu.ModifyPersonal"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="修改个人信息"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+
+    </application>
+
+</manifest>

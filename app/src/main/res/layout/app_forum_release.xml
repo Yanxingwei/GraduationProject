@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/forum_release_page">
+
+    <include layout="@layout/index_panel_layout"/>
+
+    <EditText
+        android:id="@+id/post_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_40"
+        android:gravity="center_vertical"
+        android:hint="请输入标题"
+        android:paddingLeft="@dimen/dimens_10"
+        android:paddingRight="@dimen/dimens_10"
+        android:background="@null"
+        android:textSize="@dimen/textsize_14"
+        android:cursorVisible="false"
+        android:inputType="textNoSuggestions"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_0.5"
+        android:background="@color/view_bg"/>
+
+    <EditText
+        android:id="@+id/post_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:background="@null"
+        android:gravity="top"
+        android:padding="@dimen/dimens_10"
+        android:hint="内容"
+        android:textSize="@dimen/textsize_14"
+        android:cursorVisible="false"
+        android:inputType="textNoSuggestions"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_0.5"
+        android:background="@color/view_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_40"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/release_post"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimens_40"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="发帖"
+            android:textColor="@color/common_tip_text"
+            android:textSize="@dimen/textsize_16" />
+
+        <View
+            android:layout_width="@dimen/dimens_0.5"
+            android:layout_height="@dimen/dimens_30"
+            android:background="@color/view_bg" />
+
+        <TextView
+            android:id="@+id/post_save"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimens_40"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/common_tip_text"
+            android:textSize="@dimen/textsize_16" />
+
+        <View
+            android:layout_width="@dimen/dimens_0.5"
+            android:layout_height="@dimen/dimens_30"
+            android:background="@color/view_bg" />
+
+        <TextView
+            android:id="@+id/post_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimens_40"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/common_tip_text"
+            android:textSize="@dimen/textsize_16" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_1"
+        android:background="@color/view_bg"/>
+
+
+</LinearLayout>

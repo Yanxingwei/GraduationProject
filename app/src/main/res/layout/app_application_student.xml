@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/dimens_10">
+
+    <LinearLayout
+        android:id="@+id/exam_arrangement"
+        android:layout_width="match_parent"
+        android:background="@drawable/app_applicatipn_shape"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/dimens_80">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dimens_40"
+                android:layout_height="@dimen/dimens_40"
+                android:src="@mipmap/logo"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/dimens_10"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="left|center_vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="考试安排"
+                android:textSize="@dimen/textsize_16"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无任何考试安排！"
+                android:layout_marginTop="@dimen/dimens_5"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/results_query"
+        android:layout_width="match_parent"
+        android:background="@drawable/app_applicatipn_shape"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/dimens_80"
+        android:layout_marginTop="@dimen/dimens_10">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dimens_40"
+                android:layout_height="@dimen/dimens_40"
+                android:src="@mipmap/logo"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/dimens_10"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="left|center_vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="成绩查询"
+                android:textSize="@dimen/textsize_16"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="轻轻松松查成绩！"
+                android:layout_marginTop="@dimen/dimens_5"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="auto_fit"
+        android:columnWidth="@dimen/dimens_80"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/dimens_10"
+        android:horizontalSpacing="@dimen/dimens_10"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dimens_10"
+        android:scrollbars="none">
+
+    </GridView>
+
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/app_applicatipn_shape"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/college_logo"
+        android:layout_width="@dimen/dimens_40"
+        android:layout_height="@dimen/dimens_40"
+        android:background="@mipmap/logo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/college_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="文学院"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="popupAnimation" parent="android:Animation">
+      <item name="android:windowEnterAnimation">@anim/popup_out</item>
+      <item name="android:windowExitAnimation">@anim/popup_in</item>
+     </style>
+
+    <!-- 主页底部菜单栏样式 -->
+    <style name="main_bottom_menu_style">
+        <item name="android:textSize">@dimen/textsize_12</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/dimens_45</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:paddingBottom">@dimen/dimens_2</item>
+        <item name="android:paddingTop">@dimen/dimens_2</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!--通用顶部panel，左边样式-->
+    <style name="commom_panel_back_text">
+        <item name="android:layout_marginLeft">@dimen/dimens_10</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/textsize_15</item>
+        <item name="android:textColor">@color/common_tip_text</item>
+        <item name="android:drawableLeft">@mipmap/common_top_panel_back_btn</item>
+        <item name="android:drawablePadding">@dimen/dimens_5</item>
+    </style>
+
+    <!--个人简历，副标题TextView样式-->
+    <style name="menu_personal_information_tv">
+        <item name="android:layout_height">@dimen/dimens_30</item>
+        <item name="android:background">@color/title_second</item>
+        <item name="android:paddingLeft">@dimen/dimens_15</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="dialog_bg_transparent" parent="@android:style/Theme.Dialog">
+        <!-- 设置窗口背景，透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 表示当前对话框弹出后，他后面视图(一般指Activity的视图)的透明度  0 ：完全透明    1:完全不透明，黑色 -->
+        <item name="android:backgroundDimAmount">0.75</item>
+    </style>
+
+</resources>

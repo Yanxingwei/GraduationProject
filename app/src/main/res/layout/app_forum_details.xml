@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_panel_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:id="@+id/linearlayout"
+        android:clickable="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_60"
+                    android:gravity="center_vertical">
+
+                    <com.example.teachingaffairs.ui.components.MyRoundImageView
+                        android:id="@+id/head_picture"
+                        android:layout_width="@dimen/dimens_40"
+                        android:layout_height="@dimen/dimens_40"
+                        android:background="@mipmap/aaa"
+                        android:layout_marginLeft="@dimen/dimens_10"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dimens_10"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:text="aaa"
+                            android:gravity="center_vertical"/>
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:text="aaa-aa-aa"
+                            android:gravity="center_vertical"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/content_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="aaaaaaa"
+                        android:layout_marginLeft="@dimen/dimens_10"
+                        android:layout_marginRight="@dimen/dimens_10"/>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/content_picture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/aaa"
+                    android:layout_marginTop="@dimen/dimens_10"
+                    android:layout_marginBottom="@dimen/dimens_10"/>
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_0.5"
+            android:background="@color/view_bg"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_40">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimens_40"
+                android:hint="请输入内容"
+                android:paddingLeft="@dimen/dimens_10"
+                android:cursorVisible="false"
+                android:background="@drawable/common_no_shape"
+                android:layout_weight="1.0"
+                android:textSize="@dimen/textsize_14"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="回复"
+                android:paddingLeft="@dimen/dimens_20"
+                android:paddingRight="@dimen/dimens_20"
+                android:background="@color/Reply"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
