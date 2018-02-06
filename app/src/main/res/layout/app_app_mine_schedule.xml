@@ -142,9 +142,8 @@
             android:horizontalSpacing="@dimen/dimens_3"
             android:minHeight="@dimen/dimens_60"
             android:gravity="center"
-            android:stretchMode="columnWidth">
-
-        </GridView>
+            android:stretchMode="columnWidth"
+            android:listSelector="@android:color/transparent"/>
 
     </LinearLayout>
 

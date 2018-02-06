@@ -119,8 +119,8 @@
             android:gravity="center"
             android:layout_marginTop="@dimen/dimens_10"
             android:scrollbars="none"
-            android:visibility="gone">
-        </GridView>
+            android:visibility="gone"
+            android:listSelector="@android:color/transparent"/>
 
     </LinearLayout>
 

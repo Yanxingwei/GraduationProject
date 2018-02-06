@@ -103,8 +103,7 @@
         android:horizontalSpacing="@dimen/dimens_10"
         android:gravity="center"
         android:layout_marginTop="@dimen/dimens_10"
-        android:scrollbars="none">
-
-    </GridView>
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"/>
 
 </LinearLayout>

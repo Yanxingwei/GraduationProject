@@ -14,7 +14,7 @@
         android:dividerHeight="@dimen/dimens_0"
         android:divider="#00000000"
         android:overScrollMode="never"
-        android:scrollbars="none">
-    </ListView>
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"/>
 
 </LinearLayout>
