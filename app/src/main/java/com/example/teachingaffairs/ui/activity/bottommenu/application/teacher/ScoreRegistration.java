@@ -11,7 +11,6 @@ import com.example.teachingaffairs.R;
 import com.example.teachingaffairs.ui.activity.BaseActivity;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.teacher.bean.ApplicationTeacherBean;
 import com.example.teachingaffairs.ui.activity.bottommenu.application.teacher.view.IApplicationTeacherView;
-import com.example.teachingaffairs.ui.utils.StringHelper;
 
 import java.util.List;
 
@@ -61,17 +60,10 @@ public class ScoreRegistration extends BaseActivity implements IApplicationTeach
             @Override
             public void onClick(View v) {
                 int number1,number2,number3,number4;
-                if(StringHelper.isBlank(experimentalResults.getText().toString())){
-                    number1 = Integer.parseInt(experimentalResults.getHint().toString());
-                    number2 = Integer.parseInt(grades.getText().toString());
-                    number3 = Integer.parseInt(midtermGrades.getText().toString());
-                    number4 = Integer.parseInt(finalResult.getText().toString());
-                }else{
                     number1 = Integer.parseInt(experimentalResults.getText().toString());
                     number2 = Integer.parseInt(grades.getText().toString());
                     number3 = Integer.parseInt(midtermGrades.getText().toString());
                     number4 = Integer.parseInt(finalResult.getText().toString());
-                }
                 if(number1+number2+number3+number4== 100){
                     Toast.makeText(ScoreRegistration.this,"hahaha",Toast.LENGTH_SHORT).show();
                 }else{
