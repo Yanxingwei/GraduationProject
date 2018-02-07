@@ -2,11 +2,253 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
     <include layout="@layout/common_panel_layout"/>
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="这是成绩录入"/>
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="班        级:" />
+
+            <EditText
+                android:id="@+id/the_class"
+                android:layout_width="@dimen/dimens_100"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_20"
+                android:background="@drawable/score_registration_shape"
+                android:cursorVisible="false"
+                android:hint="请输入"
+                android:textSize="@dimen/textsize_14"
+                android:paddingLeft="@dimen/dimens_5"
+                android:paddingRight="@dimen/dimens_5"
+                android:paddingTop="@dimen/dimens_3"
+                android:paddingBottom="@dimen/dimens_3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="课程名称:" />
+
+            <EditText
+                android:id="@+id/course_name"
+                android:layout_width="@dimen/dimens_100"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_20"
+                android:background="@drawable/score_registration_shape"
+                android:cursorVisible="false"
+                android:hint="请输入"
+                android:textSize="@dimen/textsize_14"
+                android:paddingLeft="@dimen/dimens_5"
+                android:paddingRight="@dimen/dimens_5"
+                android:paddingTop="@dimen/dimens_3"
+                android:paddingBottom="@dimen/dimens_3"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_30"
+            android:gravity="center"
+            android:text="请设置各项成绩比例"
+            android:textSize="@dimen/textsize_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_15"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实验成绩：" />
+
+            <EditText
+                android:id="@+id/experimental_results"
+                android:layout_width="@dimen/dimens_50"
+                android:layout_height="wrap_content"
+                android:background="@drawable/score_registration_shape"
+                android:gravity="center"
+                android:hint="0"
+                android:textSize="@dimen/textsize_14"
+                android:cursorVisible="false"
+                android:padding="@dimen/dimens_3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:layout_marginLeft="@dimen/dimens_5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_30"
+                android:text="设置范围（0~100%）"
+                android:textColor="#fa2d2d" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="平时成绩：" />
+
+            <EditText
+                android:id="@+id/grades"
+                android:layout_width="@dimen/dimens_50"
+                android:layout_height="wrap_content"
+                android:background="@drawable/score_registration_shape"
+                android:gravity="center"
+                android:hint="0"
+                android:textSize="@dimen/textsize_14"
+                android:cursorVisible="false"
+                android:padding="@dimen/dimens_3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:layout_marginLeft="@dimen/dimens_5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_30"
+                android:text="设置范围（0~100%）"
+                android:textColor="#fa2d2d" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="期中成绩：" />
+
+            <EditText
+                android:id="@+id/midterm_grades"
+                android:layout_width="@dimen/dimens_50"
+                android:layout_height="wrap_content"
+                android:background="@drawable/score_registration_shape"
+                android:gravity="center"
+                android:hint="0"
+                android:textSize="@dimen/textsize_14"
+                android:cursorVisible="false"
+                android:padding="@dimen/dimens_3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:layout_marginLeft="@dimen/dimens_5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_30"
+                android:text="设置范围（0~100%）"
+                android:textColor="#fa2d2d" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="期末成绩：" />
+
+            <EditText
+                android:id="@+id/final_result"
+                android:layout_width="@dimen/dimens_50"
+                android:layout_height="wrap_content"
+                android:background="@drawable/score_registration_shape"
+                android:gravity="center"
+                android:hint="0"
+                android:textSize="@dimen/textsize_14"
+                android:cursorVisible="false"
+                android:padding="@dimen/dimens_3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:layout_marginLeft="@dimen/dimens_5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_30"
+                android:text="设置范围（0~100%）"
+                android:textColor="#fa2d2d" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="温馨提示:各项成绩比例之和为100%，设置的各项成绩比例若不满足该条件将不能进行下一步。"
+            android:textColor="@color/common_tip_text"
+            android:layout_marginLeft="@dimen/dimens_10"
+            android:layout_marginRight="@dimen/dimens_10"
+            android:gravity="bottom"
+            android:layout_marginTop="@dimen/dimens_20"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_35"
+            android:text="下一步"
+            android:background="@color/common_blue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_16"
+            android:layout_marginLeft="@dimen/dimens_60"
+            android:layout_marginRight="@dimen/dimens_60"
+            android:layout_marginBottom="@dimen/dimens_20"/>
+
+    </LinearLayout>
 
 </LinearLayout>

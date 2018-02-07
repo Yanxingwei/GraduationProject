@@ -86,6 +86,7 @@ public class ApplicationTeacherModel implements IApplicationTeacherModel {
                 data.add(new ApplicationTeacherBean(R.mipmap.textbook2,"大学英语","2018-2-3","94"));
                 data.add(new ApplicationTeacherBean(R.mipmap.textbook3,"大学数学","2018-2-3","95"));
                 data.add(new ApplicationTeacherBean(R.mipmap.textbook5,"信号与系统","2018-2-3","99"));
+                break;
             default:
                 break;
         }
