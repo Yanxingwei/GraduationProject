@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_80"
+        android:padding="@dimen/dimens_10"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dimens_5"
+        android:layout_marginBottom="@dimen/dimens_5">
+
+        <ImageView
+            android:id="@+id/book_picture"
+            android:layout_width="@dimen/dimens_40"
+            android:layout_height="@dimen/dimens_60"
+            android:background="@mipmap/textbook1"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dimens_10"
+            android:layout_marginRight="@dimen/dimens_10">
+
+            <TextView
+                android:id="@+id/course_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hahaha"
+                android:layout_weight="1.0"
+                android:paddingTop="@dimen/dimens_2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:paddingBottom="@dimen/dimens_2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="考试时间："
+                    android:gravity="bottom|center"
+                    android:textSize="@dimen/textsize_12"/>
+
+                <TextView
+                    android:id="@+id/exam_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2018-2-5"
+                    android:gravity="bottom|center_vertical"
+                    android:textSize="@dimen/textsize_12"
+                    android:layout_weight="1.0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="评教结果："
+                    android:gravity="bottom"
+                    android:textColor="@color/common_tip_text"/>
+                <TextView
+                    android:id="@+id/evaluation_results"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="94"
+                    android:gravity="bottom"
+                    android:textColor="@color/common_tip_text"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

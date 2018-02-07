@@ -47,4 +47,47 @@ public class ApplicationTeacherBean {
         return exam_address;
     }
 
+    /**
+     * 我的课表set以及get方法
+     * mineSchedule 具体课程
+     */
+    private String mineSchedule;
+    public ApplicationTeacherBean(String mineSchedule){
+        this.mineSchedule = mineSchedule;
+    }
+    public String getMineSchedule() {
+        return mineSchedule;
+    }
+
+    /**
+     * 评教结果set以及get方法
+     * book_picture 书本照片
+     * book_name 书本名字
+     * course_exam_time 考试时间
+     * evaluation_results 评教结果
+     */
+    private int book_picture;
+    private String book_name,course_exam_time,evaluation_results;
+    public ApplicationTeacherBean(int book_picture,String book_name,String course_exam_time,String evaluation_results){
+        this.book_picture = book_picture;
+        this.book_name = book_name;
+        this.course_exam_time = course_exam_time;
+        this.evaluation_results = evaluation_results;
+    }
+    public int getBook_picture() {
+        return book_picture;
+    }
+
+    public String getBook_name() {
+        return book_name;
+    }
+
+    public String getCourse_exam_time() {
+        return course_exam_time;
+    }
+
+    public String getEvaluation_results() {
+        return evaluation_results;
+    }
+
 }
