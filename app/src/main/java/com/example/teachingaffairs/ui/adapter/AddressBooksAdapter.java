@@ -20,15 +20,14 @@ public class AddressBooksAdapter extends BaseAdapter{
 
     private ArrayList<HashMap<String,Object>> datalist;
     private LayoutInflater inflater;
-    private int last_position;
+
     public AddressBooksAdapter(Context mContext,ArrayList<HashMap<String,Object>> datalist){
         this.datalist = datalist;
         this.inflater = LayoutInflater.from(mContext);
-        last_position = datalist.size();
     }
     @Override
     public int getCount() {
-        return last_position;
+        return datalist.size();
     }
 
     @Override
@@ -72,7 +71,7 @@ public class AddressBooksAdapter extends BaseAdapter{
         holder.college_number.setText((String) datalist.get(position).get("number"));
         holder.college_go.setBackgroundResource((Integer) datalist.get(position).get("college_go"));
 
-        if(last_position - 1 == position ){
+        if(datalist.size() - 1 == position ){
             holder.college_underline.setVisibility(View.GONE);
         }else{
             holder.college_underline.setVisibility(View.VISIBLE);

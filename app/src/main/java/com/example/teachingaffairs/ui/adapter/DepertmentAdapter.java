@@ -18,16 +18,16 @@ import java.util.List;
 
 public class DepertmentAdapter extends BaseAdapter{
 
-    private List<BooksBean> data;
+    private List<BooksBean> datalist;
     private LayoutInflater inflater;
-    public DepertmentAdapter(Context mContext, List<BooksBean> data){
-        this.data = data;
+    public DepertmentAdapter(Context mContext, List<BooksBean> datalist){
+        this.datalist = datalist;
         this.inflater = LayoutInflater.from(mContext);
     }
 
     @Override
     public int getCount() {
-        return data.size();
+        return datalist.size();
     }
 
     @Override
@@ -57,10 +57,10 @@ public class DepertmentAdapter extends BaseAdapter{
         }else{
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.name.setText(data.get(position).getDepertment());
-        holder.number.setText(data.get(position).getNumber());
-        holder.head.setBackgroundResource(data.get(position).getHead_logo());
-        holder.go_logo.setBackgroundResource(data.get(position).getGo_logo());
+        holder.name.setText(datalist.get(position).getDepertment());
+        holder.number.setText(datalist.get(position).getNumber());
+        holder.head.setBackgroundResource(datalist.get(position).getHead_logo());
+        holder.go_logo.setBackgroundResource(datalist.get(position).getGo_logo());
         return convertView;
     }
 }

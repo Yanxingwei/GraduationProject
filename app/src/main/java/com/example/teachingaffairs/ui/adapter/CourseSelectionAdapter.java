@@ -19,15 +19,15 @@ import java.util.List;
  */
 
 public class CourseSelectionAdapter extends BaseAdapter {
-    private List<ApplicationStudentBean> data = new ArrayList<>();
+    private List<ApplicationStudentBean> datalist = new ArrayList<>();
     private LayoutInflater inflater;
-    public CourseSelectionAdapter(Context mContext, List<ApplicationStudentBean> data){
-        this.data = data;
+    public CourseSelectionAdapter(Context mContext, List<ApplicationStudentBean> datalist){
+        this.datalist = datalist;
         this.inflater = LayoutInflater.from(mContext);
     }
     @Override
     public int getCount() {
-        return data.size();
+        return datalist.size();
     }
 
     @Override
@@ -66,11 +66,11 @@ public class CourseSelectionAdapter extends BaseAdapter {
         }else{
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.textbook_picture.setBackgroundResource(data.get(position).getTextbook_picture());
-        holder.textbook_name.setText(data.get(position).getTextbook_name());
-        holder.teacher_name.setText(data.get(position).getTeacher_name());
-        holder.time.setText(data.get(position).getTime());
-        holder.address.setText(data.get(position).getAddress());
+        holder.textbook_picture.setBackgroundResource(datalist.get(position).getTextbook_picture());
+        holder.textbook_name.setText(datalist.get(position).getTextbook_name());
+        holder.teacher_name.setText(datalist.get(position).getTeacher_name());
+        holder.time.setText(datalist.get(position).getTime());
+        holder.address.setText(datalist.get(position).getAddress());
         return convertView;
     }
 }
