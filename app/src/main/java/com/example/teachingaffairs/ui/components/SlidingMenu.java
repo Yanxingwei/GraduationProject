@@ -80,8 +80,7 @@ public class SlidingMenu extends HorizontalScrollView {
 
     //动画效果
     @Override
-    protected void onScrollChanged(int l, int t, int oldl, int oldt)
-    {
+    protected void onScrollChanged(int l, int t, int oldl, int oldt){
         super.onScrollChanged(l, t, oldl, oldt);
         float scale = l * 1.0f / mMenu.getWidth();
         float leftScale = 1 - 0.3f * scale;
@@ -122,8 +121,7 @@ public class SlidingMenu extends HorizontalScrollView {
     /**
      * 打开菜单
      */
-    public void openMenu()
-    {
+    public void openMenu(){
         if (isOpen)
             return;
         this.smoothScrollTo(0, 0);
@@ -133,8 +131,7 @@ public class SlidingMenu extends HorizontalScrollView {
     /**
      * 关闭菜单
      */
-    public void closeMenu()
-    {
+    public void closeMenu(){
         if (isOpen)
         {
             this.smoothScrollTo(mMenu.getMeasuredWidth(), 0);
@@ -145,8 +142,7 @@ public class SlidingMenu extends HorizontalScrollView {
     /**
      * 切换菜单状态
      */
-    public void toggle()
-    {
+    public void toggle(){
         if (isOpen)
         {
             closeMenu();
