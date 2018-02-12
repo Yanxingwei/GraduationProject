@@ -48,6 +48,7 @@ public class Login extends BaseActivity implements AdapterView.OnItemClickListen
         init();
         setPower();
     }
+    //初始化
     public void init(){
         backg = (LinearLayout) findViewById(R.id.backg);
         power = (TextView) findViewById(R.id.power);
@@ -70,6 +71,7 @@ public class Login extends BaseActivity implements AdapterView.OnItemClickListen
         backg.setOnClickListener(this);
     }
 
+    //power的popupwindow里面显示的数据
     public List<Map<String,Object>> getData(){
         String numpower[] = {"教师","学生","管理员"};
         List<Map<String,Object>> list = new ArrayList<>();
@@ -82,6 +84,7 @@ public class Login extends BaseActivity implements AdapterView.OnItemClickListen
         return list;
     }
 
+    //初始化listView
     private void inilistView(){
         listView = new ListView(this);
         //设置listView的背景
@@ -153,7 +156,7 @@ public class Login extends BaseActivity implements AdapterView.OnItemClickListen
         arrowhead_state = true;
         popuwindow();
     }
-
+    //各个点击事件
     public void onClick(View view){
         switch(view.getId()){
             case R.id.btn_login:
@@ -184,6 +187,7 @@ public class Login extends BaseActivity implements AdapterView.OnItemClickListen
                 break;
         }
     }
+    //如果点击记住密码，存储数据，在这儿读取显示出来；若没有点击，只存储用户名，并在这儿显示出来
     public void readdata(){
         Map<String,String> data = sh.read();
         String pasw = data.put("password","");
@@ -202,6 +206,7 @@ public class Login extends BaseActivity implements AdapterView.OnItemClickListen
         }
     }
 
+    //根据权限里面的值判断显示对应的“工号”“学号”“账号”
     public void usernameTitle(){
         String power_text = power.getText().toString().trim();
         if(power_text.equals("教师")){

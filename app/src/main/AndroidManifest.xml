@@ -58,12 +58,6 @@
         </activity>
 
         <activity
-            android:name=".ui.activity.leftmenu.Signature"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="个人签名">
-        </activity>
-
-        <activity
             android:name=".ui.activity.leftmenu.PersonalInformation"
             android:configChanges="orientation|keyboardHidden"
             android:label="个人信息">

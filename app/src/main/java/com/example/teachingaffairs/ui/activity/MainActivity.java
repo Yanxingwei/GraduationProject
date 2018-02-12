@@ -12,6 +12,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.teachingaffairs.R;
 import com.example.teachingaffairs.ui.activity.bottommenu.addressbooks.Address_Books;
@@ -25,7 +26,6 @@ import com.example.teachingaffairs.ui.activity.leftmenu.ChangePassword;
 import com.example.teachingaffairs.ui.activity.leftmenu.MessageFeedBack;
 import com.example.teachingaffairs.ui.activity.leftmenu.OnlineService;
 import com.example.teachingaffairs.ui.activity.leftmenu.PersonalInformation;
-import com.example.teachingaffairs.ui.activity.leftmenu.Signature;
 import com.example.teachingaffairs.ui.components.SlidingMenu;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener{
@@ -198,7 +198,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 
         switch(v.getId()){
             case R.id.signature:
-                startActivity(new Intent(this, Signature.class));
+                Toast.makeText(MainActivity.this,"点击了个人签名",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.per_message:
                 startActivity(new Intent(this, PersonalInformation.class));
