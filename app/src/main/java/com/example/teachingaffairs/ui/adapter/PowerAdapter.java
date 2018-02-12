@@ -39,7 +39,8 @@ public class PowerAdapter extends BaseAdapter {
     }
 
     static class ViewHolder{
-        public TextView power;
+        private TextView power;
+        private View underline;
     }
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
@@ -50,12 +51,18 @@ public class PowerAdapter extends BaseAdapter {
             //根据自定义的Item布局加载布局
             convertView = mInflate.inflate(R.layout.list_power,null);
             holder.power = (TextView) convertView.findViewById(R.id.power);
+            holder.underline = (View) convertView.findViewById(R.id.underline);
             //将设置好的布局保存到缓存中，并将其设置在Tag里，以便后面方便取出Tag 
             convertView.setTag(holder);
         }else{
             holder = (ViewHolder) convertView.getTag();
         }
         holder.power.setText((String)powerList.get(position).get("power"));
+        if(position == powerList.size()-1){
+            holder.underline.setVisibility(View.GONE);
+        }else{
+            holder.underline.setVisibility(View.VISIBLE);
+        }
         return convertView;
     }
 }

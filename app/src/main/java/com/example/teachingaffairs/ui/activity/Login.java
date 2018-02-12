@@ -2,7 +2,6 @@ package com.example.teachingaffairs.ui.activity;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -88,8 +87,8 @@ public class Login extends BaseActivity implements AdapterView.OnItemClickListen
         //设置listView的背景
         listView.setBackgroundColor(Color.WHITE);
         //设置条目之间的分割线及滚动条不可见
-        listView.setDivider(new ColorDrawable(Color.argb(255,0,2,243)));
-        listView.setDividerHeight(1);
+        listView.setDivider(null);
+        listView.setDividerHeight(0);
         listView.setVerticalScrollBarEnabled(false);
         listView.setFooterDividersEnabled(true);
         //设置适配器
@@ -102,7 +101,7 @@ public class Login extends BaseActivity implements AdapterView.OnItemClickListen
     private void  popuwindow(){
         popWin=new PopupWindow(Login.this);
         popWin.setWidth(power.getWidth()-40);//设置宽度 和编辑框的宽度相同
-        popWin.setHeight(300); //设置高度;
+        popWin.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT); //设置高度;
         popWin.setBackgroundDrawable(getResources().getDrawable(R.drawable.login_shape_power));
         popWin.setAnimationStyle(R.style.popupAnimation);
         //为popWin填充内容

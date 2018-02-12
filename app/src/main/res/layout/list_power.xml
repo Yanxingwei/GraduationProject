@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/power"
@@ -10,5 +11,11 @@
         android:layout_marginTop="@dimen/dimens_10"
         android:paddingLeft="@dimen/dimens_5"
         android:gravity="center"/>
+
+    <View
+        android:id="@+id/underline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_0.5"
+        android:background="@color/view_bg"/>
 
 </LinearLayout>
