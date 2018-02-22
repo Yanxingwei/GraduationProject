@@ -33,7 +33,6 @@ public class ShareHelper {
         editor.putString("username",username);
         editor.commit();
     }
-
     //定义一个保存数据的方法(账号)
     public void save_power(String power){
         SharedPreferences sp = mcontext.getSharedPreferences("powerdata",Context.MODE_PRIVATE);
@@ -42,7 +41,6 @@ public class ShareHelper {
         editor.putString("power",power);
         editor.commit();
     }
-
 
     //定义一个读取sp文件的方法(账号，密码)
     public Map<String,String> read(){
@@ -73,4 +71,19 @@ public class ShareHelper {
         return postdata;
     }
 
+    //定义一个保存个人签名数据的方法
+    public void save_sinature(String sinature){
+        SharedPreferences sp = mcontext.getSharedPreferences("sinaturedata",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.clear();
+        editor.putString("naturedata",sinature);
+        editor.commit();
+    }
+    //定义读取个人签名数据的方法
+    public Map<String,String> read_sinature(){
+        SharedPreferences sp = mcontext.getSharedPreferences("sinaturedata",Context.MODE_PRIVATE);
+        Map<String,String> sinaturedata = new HashMap<String,String>();
+        sinaturedata.put("naturedata",sp.getString("naturedata",""));
+        return sinaturedata;
+    }
 }

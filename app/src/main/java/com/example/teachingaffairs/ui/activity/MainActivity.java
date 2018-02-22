@@ -4,8 +4,12 @@ import android.app.AlertDialog;
 import android.app.LocalActivityManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.Display;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.Window;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -27,6 +31,9 @@ import com.example.teachingaffairs.ui.activity.leftmenu.MessageFeedBack;
 import com.example.teachingaffairs.ui.activity.leftmenu.OnlineService;
 import com.example.teachingaffairs.ui.activity.leftmenu.PersonalInformation;
 import com.example.teachingaffairs.ui.components.SlidingMenu;
+import com.example.teachingaffairs.ui.utils.ShareHelper;
+
+import java.util.Map;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener{
 
@@ -48,15 +55,19 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     private LinearLayout Message_Feed_Back;//信息反馈
     private TextView Sinature;//个人签名
     private AlertDialog alertDialog;
+    private AlertDialog alertDialog1;
 
     private TextView add_icon;//新建
     private String value;
+
+    private ShareHelper sh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();//去除标题栏
         setContentView(R.layout.index_activity);
+        sh = new ShareHelper(this);
         mlocalActivityManager = new LocalActivityManager(this, true);
         mlocalActivityManager.dispatchCreate(savedInstanceState);
         init();
@@ -189,16 +200,53 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         Sign_Out.setOnClickListener(this);
         Message_Feed_Back.setOnClickListener(this);
         Sinature.setOnClickListener(this);
+//        Sinature.setText("hahaha");
+        readdata();
     }
+
+    public void readdata(){
+        Map<String,String> naturedata = sh.read_sinature();
+        String sinature = naturedata.put("naturedata","");
+        if (!TextUtils.isEmpty(sinature)){
+            Sinature.setText(sinature);
+        }
+    }
+
     /**
      * 菜单监听事件
      */
     @Override
     public void onClick(View v) {
-
         switch(v.getId()){
             case R.id.signature:
-                Toast.makeText(MainActivity.this,"点击了个人签名",Toast.LENGTH_SHORT).show();
+                alertDialog1 = new AlertDialog.Builder(this,R.style.dialog_bg_transparent).create();
+                Window window = alertDialog1.getWindow();
+                alertDialog1.show();
+                window.setContentView(R.layout.signature_alertdialog);
+                Display d = getWindowManager().getDefaultDisplay();
+                int x = (int) (d.getWidth() * 0.8);
+                int y = (int) (d.getHeight() * 0.3);
+                alertDialog1.getWindow().setLayout(x, y);
+                TextView tv1,tv2;
+                final EditText signature_data;
+                tv1 = window.findViewById(R.id.tv1);
+                tv2 = window.findViewById(R.id.tv2);
+                signature_data = window.findViewById(R.id.signature_data);
+                tv1.setOnClickListener(new View.OnClickListener() {
+                     @Override
+                    public void onClick(View v) {
+                        alertDialog1.dismiss();
+                        sh.save_sinature(signature_data.getText().toString());
+                        Toast.makeText(MainActivity.this,"已保存",Toast.LENGTH_SHORT).show();
+                         readdata();
+                    }
+                });
+                tv2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        alertDialog1.dismiss();
+                    }
+                });
                 break;
             case R.id.per_message:
                 startActivity(new Intent(this, PersonalInformation.class));

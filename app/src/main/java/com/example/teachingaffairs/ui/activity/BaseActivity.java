@@ -43,7 +43,6 @@ public abstract class BaseActivity extends AppCompatActivity{
 
         /**
          * 通用提示对话框
-         *
          * @param width               对话框的宽度占整个屏幕宽度的百分比，例如，0.8，如果传-1，使用默认值0.8
          * @param height              对话框的高度占整个屏幕高度的百分比，例如，0.25，如果传-1，使用默认值0.25
          * @param msg                 对话框的内容，如果传null或空，使用默认值提示
