@@ -4,17 +4,81 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="@dimen/dimens_20">
+    android:background="@color/white">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-    <Button
-        android:id="@+id/button"
-        android:onClick="getFollowers"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="发布"/>
+        android:layout_marginLeft="@dimen/dimens_10"
+        android:layout_marginRight="@dimen/dimens_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="类型："
+            android:layout_margin="@dimen/dimens_10"
+            android:gravity="right"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="公告"
+            android:layout_margin="@dimen/dimens_10"
+            android:drawableRight="@mipmap/down" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="来源："
+            android:layout_margin="@dimen/dimens_10"
+            android:gravity="right"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="公告"
+            android:layout_margin="@dimen/dimens_10"
+            android:gravity="left"
+            android:textSize="@dimen/textsize_14"
+            android:background="@drawable/common_no_shape"
+            android:cursorVisible="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimens_10"
+        android:layout_marginRight="@dimen/dimens_10"
+        android:layout_weight="1.0"
+        android:background="@drawable/release_shape">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_no_shape"
+            android:cursorVisible="false"
+            android:hint="请输入内容"
+            android:padding="@dimen/dimens_5"
+            android:textSize="@dimen/textsize_14"
+            android:layout_margin="@dimen/dimens_5"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_40"
+        android:layout_margin="@dimen/dimens_10"
+        android:background="@color/common_blue"
+        android:gravity="center"
+        android:text="发  布"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_16" />
+
 </LinearLayout>

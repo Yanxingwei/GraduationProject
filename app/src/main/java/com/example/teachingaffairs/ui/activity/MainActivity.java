@@ -200,7 +200,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         Sign_Out.setOnClickListener(this);
         Message_Feed_Back.setOnClickListener(this);
         Sinature.setOnClickListener(this);
-//        Sinature.setText("hahaha");
         readdata();
     }
 
